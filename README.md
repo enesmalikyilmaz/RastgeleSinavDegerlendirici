@@ -25,6 +25,19 @@ git clone https://github.com/enesmalikyilmaz/RastgeleSinavDegerlendirici.git
 cd RastgeleSinavDegerlendirici 
 ```
 
+### 2️⃣ Projeyi Klonlayın
+
+C programını çalıştırmak için GCC kullanabilirsiniz:
+
+```sh
+gcc main.c -o sinav_degerlendirici
+```
+
+### 3️⃣ Programı Çalıştırın
+```sh
+./sinav_degerlendirici
+```
+
 ## 📜 Kod Açıklamaları
 - 📌 **Cevap Anahtarı Oluşturma**
   
