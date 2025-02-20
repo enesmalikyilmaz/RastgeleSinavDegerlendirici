@@ -20,26 +20,26 @@ Bu proje, belirlenen soru sayısına ve öğrenci sayısına göre **rastgele bi
 ## 🛠️ Kurulum & Kullanım
 
 ### 1️⃣ Projeyi Klonlayın
-'''sh
+```sh
 git clone https://github.com/enesmalikyilmaz/RastgeleSinavDegerlendirici.git
 cd RastgeleSinavDegerlendirici 
-
+```
 
 ##📜 Kod Açıklamaları
 - 📌 **Cevap Anahtarı Oluşturma**
 rastgele_cevap_anahtari_olustur() fonksiyonu, belirlenen soru sayısına göre rastgele cevap anahtarı oluşturur.
-
+```c
 void rastgele_cevap_anahtari_olustur(char *cevapAnahtari, int soruSayisi) {
     char secenekler[] = {'A', 'B', 'C', 'D', 'E'};
     for (int i = 0; i < soruSayisi; i++) {
         cevapAnahtari[i] = secenekler[rand() % 5];
     }
 }
-
+```
 -📌 **Öğrenci Cevaplarını Oluşturma**
 ogrenci_cevaplarini_olustur() fonksiyonu, her öğrenci için rastgele cevaplar üretir.
 
-
+```c
 void ogrenci_cevaplarini_olustur(char ogrenciCevaplari[][MAX_SORU], int ogrenciSayisi, int soruSayisi) {
     char secenekler[] = {'A', 'B', 'C', 'D', 'E'};
     for (int i = 0; i < ogrenciSayisi; i++) {
@@ -48,10 +48,11 @@ void ogrenci_cevaplarini_olustur(char ogrenciCevaplari[][MAX_SORU], int ogrenciS
         }
     }
 }
+```
 -📌 **Sınav Sonuçlarını Değerlendirme**
 Öğrenci cevapları cevap anahtarıyla karşılaştırılarak doğru ve yanlış sayıları hesaplanır.
 
-
+```c
 void sinav_sonucu_hesapla(char *cevapAnahtari, char ogrenciCevaplari[][MAX_SORU], int ogrenciSayisi, int soruSayisi) {
     for (int i = 0; i < ogrenciSayisi; i++) {
         int dogru = 0, yanlis = 0;
@@ -65,3 +66,4 @@ void sinav_sonucu_hesapla(char *cevapAnahtari, char ogrenciCevaplari[][MAX_SORU]
         printf("Öğrenci %d → Doğru: %d, Yanlış: %d, Net: %.2f\n", i + 1, dogru, yanlis, dogru - (yanlis / 4.0));
     }
 }
+```
