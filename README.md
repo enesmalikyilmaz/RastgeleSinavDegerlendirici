@@ -22,11 +22,11 @@ Bu proje, belirlenen soru sayısına ve öğrenci sayısına göre **rastgele bi
 ### 1️⃣ Projeyi Klonlayın
 '''sh
 git clone https://github.com/enesmalikyilmaz/RastgeleSinavDegerlendirici.git
-cd RastgeleSinavDegerlendirici '''
+cd RastgeleSinavDegerlendirici 
 
 
-📜 Kod Açıklamaları
-📌 Cevap Anahtarı Oluşturma
+##📜 Kod Açıklamaları
+- 📌 **Cevap Anahtarı Oluşturma**
 rastgele_cevap_anahtari_olustur() fonksiyonu, belirlenen soru sayısına göre rastgele cevap anahtarı oluşturur.
 
 void rastgele_cevap_anahtari_olustur(char *cevapAnahtari, int soruSayisi) {
@@ -36,7 +36,7 @@ void rastgele_cevap_anahtari_olustur(char *cevapAnahtari, int soruSayisi) {
     }
 }
 
-📌 Öğrenci Cevaplarını Oluşturma
+-📌 **Öğrenci Cevaplarını Oluşturma**
 ogrenci_cevaplarini_olustur() fonksiyonu, her öğrenci için rastgele cevaplar üretir.
 
 
@@ -48,7 +48,7 @@ void ogrenci_cevaplarini_olustur(char ogrenciCevaplari[][MAX_SORU], int ogrenciS
         }
     }
 }
-📌 Sınav Sonuçlarını Değerlendirme
+-📌 **Sınav Sonuçlarını Değerlendirme**
 Öğrenci cevapları cevap anahtarıyla karşılaştırılarak doğru ve yanlış sayıları hesaplanır.
 
 
